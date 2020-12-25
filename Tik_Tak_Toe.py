@@ -51,16 +51,16 @@ def comp_move():
                 move = i
                 return move
             
-    if 5 in possible_moves:
-        move = 5
-        return move
-
     cornersOpens = []
     for i in possible_moves:
         if i in [1, 3, 7, 9]:
             cornersOpens.append(i)
     if len(cornersOpens) > 0:
         move = select_random(cornersOpens)
+        return move
+
+    if 5 in possible_moves:
+        move = 5
         return move
 
     edgesOpens = []
